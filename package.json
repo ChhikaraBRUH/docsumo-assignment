@@ -9,11 +9,23 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@tailwindcss/forms": "^0.5.4",
+    "axios": "^1.4.0",
+    "class-variance-authority": "^0.7.0",
+    "classnames": "^2.3.2",
+    "clsx": "^2.0.0",
+    "lucide-react": "^0.261.0",
+    "next": "14.0.4",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.0.4"
+    "react-hook-form": "^7.45.4",
+    "sonner": "^1.0.3",
+    "tailwind-merge": "^1.14.0",
+    "tailwindcss-animate": "^1.0.6",
+    "zod": "^3.21.4"
   },
   "devDependencies": {
+    "@ianvs/prettier-plugin-sort-imports": "4.1.0",
     "typescript": "^5",
     "@types/node": "^20",
     "@types/react": "^18",
@@ -21,6 +33,8 @@
     "autoprefixer": "^10.0.1",
     "postcss": "^8",
     "tailwindcss": "^3.3.0",
+    "prettier": "^3.0.0",
+    "prettier-plugin-tailwindcss": "^0.4.1",
     "eslint": "^8",
     "eslint-config-next": "14.0.4"
   }
