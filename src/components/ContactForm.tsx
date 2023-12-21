@@ -25,7 +25,7 @@ export default function ContactForm() {
   return (
     <div className="w-full bg-brand-dark pt-24">
       <div className="container mx-auto mb-16 flex flex-col items-center gap-8 md:flex-row md:gap-16">
-        <div className="flex w-1/2 flex-col">
+        <div className="flex w-[90%] flex-col md:w-1/2">
           <p
             className={cn(
               LibreBaskerville.className,
@@ -47,7 +47,7 @@ export default function ContactForm() {
             Docsumo&apos;s intelligent document processing enables you to
             extract data easily, efficiently, and accurately.
           </p>
-          <p className="mb-16 text-lg text-white">
+          <p className="mb-8 text-lg text-white md:mb-16">
             <span className="bg-brand-blue">Fill up the form</span> to speak
             with an automation expert.
           </p>
@@ -57,7 +57,7 @@ export default function ContactForm() {
             width={500}
             height={100}
             alt=""
-            className="h-auto max-w-[500px]"
+            className="h-auto w-full md:max-w-[500px]"
           />
         </div>
 
@@ -143,8 +143,8 @@ function FormComponent() {
 
   if (success) {
     return (
-      <div className="w-1/2 rounded-md bg-white px-8 py-10">
-        <p className="text-center text-3xl font-bold">
+      <div className="w-[90%] rounded-md bg-white px-8 py-10 md:w-1/2">
+        <p className="text-center text-xl font-bold md:text-3xl">
           Thank you for your interest!
         </p>
         <p className="text-center text-lg">
@@ -155,7 +155,7 @@ function FormComponent() {
   }
 
   return (
-    <div className="w-1/2 rounded-md bg-white px-8 py-10">
+    <div className="w-[90%] rounded-md bg-white px-8 py-10 md:w-1/2">
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(onSubmit)}
