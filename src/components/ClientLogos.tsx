@@ -47,7 +47,7 @@ function LogosGrid() {
   };
 
   return (
-    <div className="grid w-full grid-cols-2 md:grid-cols-4">
+    <div className="grid w-full grid-cols-2 md:w-[80%] md:grid-cols-4">
       {CLIENT_LOGOS.map((logo, index) => (
         <div
           className={cn(
