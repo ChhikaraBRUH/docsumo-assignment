@@ -18,7 +18,7 @@ export default function TestimonialsCarousel() {
 
   return (
     <div className="w-full bg-[#f8f8fa]">
-      <div className="container mx-auto flex justify-center px-4 py-12 md:py-24">
+      <div className="container mx-auto flex justify-center px-4 py-20 md:py-24">
         <Flickity
           className="w-[90%]"
           options={FLICKITY_OPTIONS}
