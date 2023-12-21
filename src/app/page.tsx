@@ -1,8 +1,9 @@
+import ClientLogos from "@/components/ClientLogos";
+
 export default function Home() {
   return (
     <div>
-      <h1>Docsumo</h1>
-      <p>Document AI Platform Built for Scale & Efficiency</p>
+      <ClientLogos />
     </div>
   );
 }
