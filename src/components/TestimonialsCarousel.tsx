@@ -43,7 +43,7 @@ function Testimonial({
 }: {
   imgUrl: string;
   heading: string;
-  description: string;
+  description: JSX.Element;
   name: string;
   designation: string;
   bgColor: string;
