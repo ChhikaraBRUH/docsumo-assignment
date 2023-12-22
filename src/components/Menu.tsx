@@ -1,6 +1,7 @@
 "use client";
 
 import { MobileMenuSheet } from "@/components/MobileMenuSheet";
+import NavigationListItem from "@/components/NavigationListItems";
 import { Button } from "@/components/ui/Button";
 import { Icons } from "@/components/ui/Icons";
 import {
@@ -15,7 +16,6 @@ import {
 import cn from "@/utils/cn";
 import {
   BookIcon,
-  ChevronRightIcon,
   CircleDollarSignIcon,
   HandMetalIcon,
   HeartHandshakeIcon,
@@ -74,7 +74,12 @@ export default function Menu() {
         <MenuButtons />
 
         {/* Mobile Only Menu */}
-        <MobileMenuSheet>
+        <MobileMenuSheet
+          SOLUTIONS={SOLUTIONS}
+          TOOLS={TOOLS}
+          COMPANY={COMPANY}
+          RESOURCES={RESOURCES}
+        >
           <MenuIcon
             className={cn(
               "flex h-6 w-6 transition-colors lg:hidden",
@@ -167,22 +172,22 @@ function NavigationMenuDropdownItem({
           }}
         >
           {links?.length > 1 ? (
-            links.map((link: any) => (
-              <div key={link?.title} className="flex flex-col gap-4">
+            links.map((list: any) => (
+              <div key={list?.title} className="flex flex-col gap-4">
                 <p className="text-xs font-medium uppercase text-[#a3a8b0]">
-                  {link?.title}
+                  {list?.title}
                 </p>
 
                 <ul className="flex flex-col gap-4">
-                  {link.items.map((item: any) => (
-                    <ListItem
+                  {list.items.map((item: any) => (
+                    <NavigationListItem
                       key={item.title}
                       title={item.title}
                       description={item.description}
                       bgColor={item.bgColor}
                     >
                       {item.icon}
-                    </ListItem>
+                    </NavigationListItem>
                   ))}
                 </ul>
               </div>
@@ -190,56 +195,20 @@ function NavigationMenuDropdownItem({
           ) : (
             <ul className="flex flex-col gap-4">
               {links?.[0]?.items.map((item: any) => (
-                <ListItem
+                <NavigationListItem
                   key={item.title}
                   title={item.title}
                   description={item.description}
                   bgColor={item.bgColor}
                 >
                   {item.icon}
-                </ListItem>
+                </NavigationListItem>
               ))}
             </ul>
           )}
         </div>
       </NavigationMenuContent>
     </NavigationMenuItem>
-  );
-}
-
-function ListItem({
-  title,
-  description,
-  bgColor = "#fad6b0",
-  children,
-}: {
-  title: string;
-  description?: string;
-  bgColor?: string;
-  children: React.ReactNode;
-}) {
-  return (
-    <li className="group flex w-full cursor-pointer flex-row items-center gap-4">
-      <div
-        className="flex items-center justify-center rounded-md p-2 opacity-75 transition-all group-hover:opacity-100"
-        style={{ backgroundColor: bgColor }}
-      >
-        {children}
-      </div>
-
-      <div className="flex flex-col gap-1">
-        <div className="flex flex-row items-center gap-1 transition-all duration-300 group-hover:gap-2">
-          <p className="text-sm font-semibold text-brand-dark">{title}</p>
-          {!description && (
-            <ChevronRightIcon className="hidden h-4 w-4 transition-all group-hover:block" />
-          )}
-        </div>
-
-        {!!description && (
-          <p className="text-sm text-[#8b8596]">{description}</p>
-        )}
-      </div>
-    </li>
   );
 }
 
