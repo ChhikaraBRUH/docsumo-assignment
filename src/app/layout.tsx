@@ -7,7 +7,7 @@ import "@/app/globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Docsumo",
+  title: "Docsumo - Document AI Platform Built for Scale & Efficiency",
   description: "Document AI Platform Built for Scale & Efficiency",
 };
 
